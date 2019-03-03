@@ -26,7 +26,13 @@ export default {
   data() {
     return {
       id: this.$route.params.id, // 将 URL 地址中传递过来的 Id值，挂载到 data上，方便以后调用
-      newsinfo: {} // 新闻对象
+      newsinfo: {
+          'img_url': 'http://pic27.nipic.com/20130329/890845_115317964000_2.jpg',
+          'click':3,
+          'title':'第一个列表详情',
+          'add_time':'2018-02-16T11:59:22+08:00',
+          'content': '<p>今夜这场胜利，使得巴萨在联赛中连续四个赛季在伯纳乌获胜。在西甲创立以来，这还是破天荒的第一回。在15/16赛季中，皇马主场0-4溃败给巴萨，贝尼特斯很快下课。在16/17赛季中，巴萨主场2-3落败，梅西在终场前上演绝杀梅开二度。在上赛季中，皇马主场0-3惨败，卡瓦哈尔染红离场。今夜，皇马又在主场输了个0-1。</p>',
+        }
     };
   },
   created() {
@@ -52,6 +58,7 @@ export default {
 </script>
 
 <style lang="scss">
+//图片出现问题，把scope去掉就ok，但这样可能污染全局样式，这里都在.newsinfo-container里，所以不污染
 .newsinfo-container {
   padding: 0 4px;
   .title {

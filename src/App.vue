@@ -2,7 +2,7 @@
   <div class="app-container">
 
     <!-- 顶部 Header 区域 -->
-    <mt-header fixed title="fixed top"></mt-header>
+    <mt-header fixed title="jin的调试商城"></mt-header>
 
 
     <!-- 中间的 路由 router-view 区域 -->

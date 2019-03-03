@@ -25,7 +25,15 @@ import { Toast } from "mint-ui";
 export default {
   data() {
     return {
-      newslist: [] // 新闻列表
+      newslist: [
+        {
+          'id':12,
+          'img_url': 'http://pic27.nipic.com/20130329/890845_115317964000_2.jpg',
+          'click':2,
+          'title':'初始化第一个列表',
+          'add_time':'2018-02-06T11:59:22+08:00'
+        }
+      ] // 新闻列表
     };
   },
   created() {
