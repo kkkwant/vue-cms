@@ -29,13 +29,45 @@
 
 <script>
 // 1. 导入 mui 的js文件
-// import mui from "../../lib/mui/js/mui.min.js";
+ import mui from "../../lib/mui/js/mui.min.js";
 
 export default {
   data() {
     return {
-      cates: [], // 所有分类的列表数组
-      list: [] // 图片列表的数组
+      cates: [
+        { title: "全部", id: 0 },
+        { title: "推荐", id: 1 },
+        { title: "热点", id: 2 },
+        { title: "北京", id: 3 },
+        { title: "社会上", id: 4 },
+        { title: "娱乐", id: 5 },
+      ], // 所有分类的列表数组
+      list: [
+        { 
+          title: "娱乐", 
+          id: 5, 
+          img_url: 'http://img5.imgtn.bdimg.com/it/u=746215187,1522527078&fm=26&gp=0.jpg',
+          zhaiyao: '回想到很多年前我刚参加工作时的面试经历' 
+        },
+        { 
+          title: "哈哈", 
+          id: 5, 
+          img_url: 'http://pic3.nipic.com/20090702/918855_174429094_2.jpg',
+          zhaiyao: '此前被商船撞沉的挪威海军“英斯塔”号护卫舰，于水中沉没了4个月后，在两艘浮吊船“格列佛”号和“拉姆比茨”号的联合努力下，被成功打捞出水。' 
+        },
+        { 
+          title: "压力硝烟厅", 
+          id: 5, 
+          img_url: 'http://pic31.nipic.com/20130723/7764111_154348010000_2.jpg',
+          zhaiyao: '来自中国的女子草量级选手张伟丽，经过3回合，判定击败官方排名第7位的特西娅-托雷斯，在排名进入UFC排名前十的同时，也创造了中国选手征战UFC的最佳战绩。' 
+        },
+        { 
+          title: "流星火雨", 
+          id: 5, 
+          img_url: 'http://pic.qiantucdn.com/58pic/15/75/48/40f58PICzpi_1024.jpg',
+          zhaiyao: '在排名进入UFC排名前十的同时，也创造了中国选手征战UFC的最佳战绩。' 
+        }
+      ] // 图片列表的数组
     };
   },
   created() {
@@ -94,6 +126,7 @@ export default {
       width: 100%;
       vertical-align: middle;
     }
+    //mint手册里抓的样式
     img[lazy="loading"] {
       width: 40px;
       height: 300px;
