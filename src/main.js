@@ -30,8 +30,11 @@ import './lib/mui/css/icons-extra.css'
 // Vue.component(Button.name, Button)
 import MintUI from 'mint-ui'
 Vue.use(MintUI)
+import 'mint-ui/lib/style.css'
 
-
+// 安装 图片预览插件
+import VuePreview from 'vue-preview'
+Vue.use(VuePreview)
 
 import router from './router.js'   // 1.3 导入自己的 router.js 路由模块
 import app from './App.vue'  	// 导入 App 根组件
